@@ -6,7 +6,7 @@ project (mctpw CXX)
 option (YOCTO_DEPENDENCIES "Use YOCTO depedencies system" OFF)
 
 set (BUILD_SHARED_LIBRARIES ON)
-set (CMAKE_CXX_STANDARD 17)
+set (CMAKE_CXX_STANDARD 20)
 set (CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set (
