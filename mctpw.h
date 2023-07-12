@@ -61,6 +61,8 @@ typedef enum
     NVME_MGMT_MSG = 0x04,
     /** @brief Security Protocol and Data Model over MCTP */
     SPDM = 0x05,
+    /** @brief Secured Messages using SPDM over MCTP */
+    SECURED_MSG = 0x06,
     /** @brief Vendor Defined PCI */
     VDPCI = 0x7E,
     /** @brief Vendor Defined IANA */
@@ -79,6 +81,7 @@ typedef struct
     bool ethernet;
     bool nvme_mgmt_msg;
     bool spdm;
+    bool secured_msg;
     bool vdpci;
     bool vdiana;
 } mctpw_endpoint_properties_t;

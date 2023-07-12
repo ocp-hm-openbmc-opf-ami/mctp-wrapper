@@ -623,7 +623,7 @@ int mctpw_get_matching_endpoint_list(void* client_context, mctpw_eid_t* eids,
             {PLDM, "PLDM"},         {NCSI, "NCSI"},
             {ETHERNET, "Ethernet"}, {NVME_MGMT_MSG, "NVMeMgmtMsg"},
             {SPDM, "SPDM "},        {VDPCI, "VDPCI"},
-            {VDIANA, "VDIANA"}};
+            {VDIANA, "VDIANA"},     {SECURED_MSG : "SECUREDMSG"}};
     if (!client_context || !num || !eids || *num == 0)
     {
         return -EINVAL;
@@ -734,6 +734,7 @@ int mctpw_get_endpoint_properties(void* client_context, mctpw_eid_t eid,
         properties->ethernet = std::get<bool>(props.at("Ethernet"));
         properties->nvme_mgmt_msg = std::get<bool>(props.at("NVMeMgmtMsg"));
         properties->spdm = std::get<bool>(props.at("SPDM"));
+        properties->secured_msg = std::get<bool>(props.at("SECUREDMSG"));
         properties->vdpci = std::get<bool>(props.at("VDPCI"));
         properties->vdiana = std::get<bool>(props.at("VDIANA"));
 

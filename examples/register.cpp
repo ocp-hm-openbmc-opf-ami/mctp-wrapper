@@ -143,6 +143,9 @@ int main(void)
                       << std::endl;
             std::cout << "spdm: " << (endpoint_prop.spdm ? "true" : "false")
                       << std::endl;
+            std::cout << "secured_msg: "
+                      << (endpoint_prop.secured_msg ? "true" : "false")
+                      << std::endl;
             std::cout << "vdpci: " << (endpoint_prop.vdpci ? "true" : "false")
                       << std::endl;
             std::cout << "vdiana: " << (endpoint_prop.vdiana ? "true" : "false")
